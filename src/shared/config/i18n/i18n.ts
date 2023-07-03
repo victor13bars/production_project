@@ -8,7 +8,7 @@ i18n
     .use(Backend)
     .use(LanguageDetector)
     .use(initReactI18next)
-      .init({
+    .init({
         fallbackLng: 'ru',
         debug: __IS_DEV__ ? true : false,
 
