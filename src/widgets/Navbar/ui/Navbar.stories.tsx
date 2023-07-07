@@ -1,25 +1,23 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {ThemeDecorator} from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import {Theme} from "app/providers/ThemeProvider";
-import {Navbar} from "widgets/Navbar";
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-const meta: Meta<typeof Navbar> = {
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from 'app/providers/ThemeProvider';
+import { Navbar } from './Navbar';
+
+export default {
     title: 'widget/Navbar',
     component: Navbar,
-    tags: ['autodocs'],
-    argTypes: {},
-};
+    argTypes: {
+        backgroundColor: { control: 'color' },
+    },
+} as ComponentMeta<typeof Navbar>;
 
-export default meta;
-type Story = StoryObj<typeof Navbar>;
+const Template: ComponentStory<typeof Navbar> = (args) => <Navbar {...args} />;
 
-export const Light: Story = {
-    args: {},
-};
+export const Light = Template.bind({});
+Light.args = {};
 
-export const Dark: Story = {
-    args: {},
-};
-
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
-
+export const Dark = Template.bind({});
+Dark.args = {};
+Dark.decorators = [ThemeDecorator(Theme.DARK)];
