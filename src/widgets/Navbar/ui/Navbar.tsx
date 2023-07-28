@@ -28,9 +28,7 @@ export const Navbar = ({ className }: NavbarProps) => {
             <Modal
                 isOpen={isAuthModal}
                 onClose={onToggleModal}
-            >
-                Lorem dsmfsdlmfls gefesgse
-            </Modal>
+            />
         </div>
     );
 };

@@ -29,7 +29,7 @@ module.exports = {
         indent: [2, 4],
         'react/jsx-filename-extension': [
             2,
-            { extensions: ['.js', '.jsx', '.tsx'] },
+            {extensions: ['.js', '.jsx', '.tsx']},
         ],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
@@ -49,8 +49,9 @@ module.exports = {
                 ignoreAttribute: ['data-testid', 'to'],
             },
         ],
-        'max-len': ['error', { ignoreComments: true, code: 100 }],
+        'max-len': ['error', {ignoreComments: true, code: 100}],
         'jsx-a11y/no-static-element-interactions': 'off',
+        'jsx-a11y/click-events-have-key-events': 'off',
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
         'no-param-reassign': 'off'

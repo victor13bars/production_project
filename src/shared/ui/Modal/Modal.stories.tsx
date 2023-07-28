@@ -1,14 +1,14 @@
 import React from 'react';
-import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {Modal} from "shared/ui/Modal/Modal";
-import {ThemeDecorator} from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import {Theme} from "app/providers/ThemeProvider";
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Modal } from 'shared/ui/Modal/Modal';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from 'app/providers/ThemeProvider';
 
 export default {
     title: 'shared/Modal',
     component: Modal,
     argTypes: {
-        backgroundColor: {control: 'color'},
+        backgroundColor: { control: 'color' },
     },
 } as ComponentMeta<typeof Modal>;
 
@@ -26,4 +26,4 @@ Dark.args = {
     children: 'Lorem lorem lorem',
 };
 
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [ThemeDecorator(Theme.DARK)];
